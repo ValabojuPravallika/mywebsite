@@ -14,6 +14,29 @@
             color: #333;
         }
 
+        /* Navigation Bar */
+        nav {
+            background-color: #4CAF50;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #45a049;
+        }
+
+        nav a.active {
+            background-color: #333;
+        }
+
         /* Container for image and text */
         .container {
             display: flex;
@@ -62,33 +85,51 @@
             line-height: 1.6;
             margin-top: 10px;
         }
-        .tab-tiles{
-            dispay: flex;
-            margin; 20px 0 40px;
+
+        /* Flexbox for sections */
+        .sections {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
         }
-        .tab-links{
-            margin-right: 50px;
-            font-size: 18px;
-            font-weight: 500;
-            cursor: pointer;
-            postion: relative;
+
+        .section {
+            width: 30%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        .tab-links::after{
-            content: '';
-            width: 0;
-            height: 3px;
-            background: #ff004f;
-            position: absoulte;
-            left: 0;
-            bottom: -8px;
-            tramsition: 0.5s;
+
+        /* Section headings */
+        .section h3 {
+            font-size: 20px;
+            color: #4CAF50;
+            margin-bottom: 10px;
         }
-        .tab-links.active-link::after{
-            width: 50%;
+
+        /* Active Link Styling */
+        .active {
+            background-color: #333;
+            color: white;
         }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="#skills" id="skills-link">Skills</a>
+        <a href="#education" id="education-link">Education</a>
+        <a href="#hobbies" id="hobbies-link">Hobbies</a>
+    </nav>
 
     <!-- About Me Container -->
     <div class="container">
@@ -99,11 +140,71 @@
         <div class="about-me">
             <h2>About Me</h2>
             <p>Hello, I'm [Your Name], a passionate web developer. I specialize in creating dynamic, user-friendly websites. I love learning new technologies, solving challenges, and constantly improving my skills. Below, you can find more about my skills, education, and hobbies.</p>
-            <div class="tab-titles">
-                <p class="tab-links active-link">Skills</p>
-                <p class="tab-links">Education</p>
-                <p class="tab-links">Hobbies</p>                   
         </div>
     </div>
+
+    <!-- Sections for Skills, Education, and Hobbies -->
+    <div class="sections">
+        <!-- Skills Section -->
+        <div class="section" id="skills">
+            <h3>Skills</h3>
+            <div class="section-content">
+                <ul>
+                    <li>Web Development (HTML, CSS, JavaScript)</li>
+                    <li>Responsive Design</li>
+                    <li>Backend Development (Node.js, Express)</li>
+                    <li>Version Control (Git, GitHub)</li>
+                    <li>Database Management (MySQL, MongoDB)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section" id="education">
+            <h3>Education</h3>
+            <div class="section-content">
+                <p>BS in Computer Science from [University Name] - Graduated in 2020</p>
+                <p>Completed various online courses on web development and software engineering.</p>
+            </div>
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="section" id="hobbies">
+            <h3>Hobbies</h3>
+            <div class="section-content">
+                <ul>
+                    <li>Coding and building new projects</li>
+                    <li>Playing video games</li>
+                    <li>Reading tech blogs and books</li>
+                    <li>Photography</li>
+                    <li>Traveling and exploring new places</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to highlight active link
+        const links = document.querySelectorAll('nav a');
+
+        // Function to remove active class from all links
+        function removeActiveClass() {
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+        }
+
+        // Function to add active class to clicked link
+        function setActiveClass(e) {
+            removeActiveClass();
+            e.target.classList.add('active');
+        }
+
+        // Add event listener to each link
+        links.forEach(link => {
+            link.addEventListener('click', setActiveClass);
+        });
+    </script>
+
 </body>
 </html>
