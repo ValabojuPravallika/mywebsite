@@ -5,198 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self Introduction</title>
     <style>
-        /* Basic Styles */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Header and Nav */
-        nav {
+        header {
             background-color: #4CAF50;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
             color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            margin: 0 15px;
-            transition: background-color 0.3s;
+            text-align: center;
+            padding: 15px;
         }
 
-        nav a:hover {
-            background-color: #45a049;
-        }
-
-        /* Active link styling */
-        nav a.active {
-            background-color: #333;
-        }
-
-        /* Main content */
-        .main-container {
+        .container {
             display: flex;
-            justify-content: space-between;
-            margin-top: 50px;
-            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
         }
 
-        /* Image styling */
+        /* Image Style */
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+
         .image-container img {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
         }
 
-        /* Introduction text */
+        /* Introduction Text */
         .intro-container {
-            max-width: 600px;
-            padding-left: 20px;
+            flex: 2;
+            padding-left: 30px;
         }
 
         .intro-container h2 {
-            font-size: 24px;
+            font-size: 32px;
             color: #4CAF50;
         }
 
         .intro-container p {
             font-size: 18px;
-            color: #555;
             line-height: 1.6;
-        }
-
-        /* Sections Styling */
-        .sections {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 50px;
-        }
-
-        .section {
-            background-color: #fff;
-            padding: 20px;
-            width: 30%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-
-        .section h3 {
-            font-size: 20px;
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
-
-        .section-content {
-            font-size: 18px;
             color: #555;
-            display: none;
-            line-height: 1.6;
         }
 
-        .section:hover {
-            background-color: #e0f2e9;
-        }
-
-        /* Show active content */
-        .show {
-            display: block;
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#hobbies" class="nav-link">Hobbies</a>
-        <a href="#education" class="nav-link">Education</a>
-    </nav>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to My Self Introduction Page</h1>
+    </header>
 
-    <!-- Main Content: Image and Introduction -->
-    <div class="main-container">
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Image -->
         <div class="image-container">
             <img src="photo.jpg" alt="Your Image">
         </div>
+
+        <!-- Introduction Text -->
         <div class="intro-container">
             <h2>About Me</h2>
-            <p>Hello, I'm [Your Name]. I'm a web developer passionate about creating beautiful and responsive websites. I love learning new technologies and constantly improving my skills. Below, you can find more about my skills, hobbies, and educational background.</p>
+            <p>Hello! My name is [Your Name]. I am passionate about web development and enjoy learning new technologies. I specialize in front-end development and love creating user-friendly, interactive websites. In my free time, I enjoy reading, traveling, and working on personal coding projects. Thanks for visiting my page!</p>
         </div>
     </div>
 
-    <!-- Sections for Skills, Hobbies, Education -->
-    <div class="sections">
-        <!-- Skills Section -->
-        <div class="section" id="skills">
-            <h3>Skills</h3>
-            <div class="section-content">
-                <ul>
-                    <li>HTML, CSS, and JavaScript</li>
-                    <li>Responsive Design</li>
-                    <li>Backend Development (Node.js)</li>
-                    <li>Version Control (Git, GitHub)</li>
-                    <li>Database Management (MongoDB)</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Hobbies Section -->
-        <div class="section" id="hobbies">
-            <h3>Hobbies</h3>
-            <div class="section-content">
-                <ul>
-                    <li>Coding and building new projects</li>
-                    <li>Photography</li>
-                    <li>Playing video games</li>
-                    <li>Traveling and exploring new places</li>
-                    <li>Reading tech blogs</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Education Section -->
-        <div class="section" id="education">
-            <h3>Education</h3>
-            <div class="section-content">
-                <p>Bachelor of Science in Computer Science from [University Name] - Graduated in 2020</p>
-                <p>Completed several online courses in web development, JavaScript, and Full-Stack Development.</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript for displaying the content when a section is clicked
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        sections.forEach((section, index) => {
-            section.addEventListener('click', function () {
-                // Hide all sections content
-                document.querySelectorAll('.section-content').forEach(content => content.classList.remove('show'));
-
-                // Show clicked section content
-                section.querySelector('.section-content').classList.add('show');
-
-                // Remove active class from all links and add to the clicked one
-                navLinks.forEach(link => link.classList.remove('active'));
-                navLinks[index].classList.add('active');
-            });
-        });
-
-        // Click on the first section by default
-        document.querySelector('.section').click();
-    </script>
+    <!-- Footer -->
+    <footer>
+        <p>Created with ❤️ by [Your Name]</p>
+    </footer>
 
 </body>
 </html>
