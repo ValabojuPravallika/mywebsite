@@ -12,3 +12,8 @@ body{
     padding: 80px 0;
     color: #ababab;
 }
+.row{
+    dispay: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
