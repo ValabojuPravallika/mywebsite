@@ -73,6 +73,19 @@
             cursor: pointer;
             postion: relative;
         }
+        .tab-links::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absoulte;
+            left: 0;
+            bottom: -8px;
+            tramsition: 0.5s;
+        }
+        .tab-links.active-link::after{
+            width: 50%;
+        }
     </style>
 </head>
 <body>
@@ -87,13 +100,10 @@
             <h2>About Me</h2>
             <p>Hello, I'm [Your Name], a passionate web developer. I specialize in creating dynamic, user-friendly websites. I love learning new technologies, solving challenges, and constantly improving my skills. Below, you can find more about my skills, education, and hobbies.</p>
             <div class="tab-titles">
-                <p class="tab-links">Skills</p>
+                <p class="tab-links active-link">Skills</p>
                 <p class="tab-links">Education</p>
-                <p class="tab-links">Hobbies</p>
-                
-                
+                <p class="tab-links">Hobbies</p>                   
         </div>
     </div>
-
 </body>
 </html>
