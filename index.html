@@ -3,21 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self Introduction</title>
-    <link ref="stylesheet" href="style.css">
+    <title>About Me</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Container for image and text */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* Image styling */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* About Me Section */
+        .about-me {
+            max-width: 600px;
+            padding-left: 20px;
+        }
+
+        .about-me h2 {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+
+        .about-me p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Section Title Styling */
+        .section-title {
+            font-size: 22px;
+            color: #4CAF50;
+            margin-top: 30px;
+        }
+
+        /* Section Content Styling */
+        .section-content {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        /* Flexbox for sections */
+        .sections {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .section {
+            width: 30%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section headings */
+        .section h3 {
+            font-size: 20px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>SELF INTRODUCTION</h1>
-    <p>This is a simple HTML page in my GitHub repository.</p>
-<div id="about">
+
+    <!-- About Me Container -->
     <div class="container">
-        <div class="row">
-            <div class="about-col-1"></div>
-                <img src="photo.jpg" width="300" height="100">
-            <div class="about-col-2"></div>
-            <h1>About Me</h1>
+        <!-- Image Section -->
+        <img src="https://via.placeholder.com/200" alt="Your Photo" class="profile-img">
+        
+        <!-- About Me Text Section -->
+        <div class="about-me">
+            <h2>About Me</h2>
+            <p>Hello, I'm [Your Name], a passionate web developer. I specialize in creating dynamic, user-friendly websites. I love learning new technologies, solving challenges, and constantly improving my skills. Below, you can find more about my skills, education, and hobbies.</p>
         </div>
     </div>
-</div>
+
+    <!-- Sections for Skills, Education, and Hobbies -->
+    <div class="sections">
+        <!-- Skills Section -->
+        <div class="section">
+            <h3>Skills</h3>
+            <div class="section-content">
+                <ul>
+                    <li>Web Development (HTML, CSS, JavaScript)</li>
+                    <li>Responsive Design</li>
+                    <li>Backend Development (Node.js, Express)</li>
+                    <li>Version Control (Git, GitHub)</li>
+                    <li>Database Management (MySQL, MongoDB)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h3>Education</h3>
+            <div class="section-content">
+                <p>BS in Computer Science from [University Name] - Graduated in 2020</p>
+                <p>Completed various online courses on web development and software engineering.</p>
+            </div>
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="section">
+            <h3>Hobbies</h3>
+            <div class="section-content">
+                <ul>
+                    <li>Coding and building new projects</li>
+                    <li>Playing video games</li>
+                    <li>Reading tech blogs and books</li>
+                    <li>Photography</li>
+                    <li>Traveling and exploring new places</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
