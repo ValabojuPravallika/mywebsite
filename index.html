@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self Introduction</title>
     <style>
-        /* General styles */
+        /* Basic Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f9;
             color: #333;
         }
 
-        /* Navigation Bar */
+        /* Header and Nav */
         nav {
             background-color: #4CAF50;
-            padding: 10px 0;
+            padding: 15px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
             color: white;
-            padding: 14px 20px;
+            padding: 12px 20px;
             text-decoration: none;
             font-size: 18px;
+            margin: 0 15px;
             transition: background-color 0.3s;
         }
 
@@ -33,138 +37,117 @@
             background-color: #45a049;
         }
 
+        /* Active link styling */
         nav a.active {
             background-color: #333;
         }
 
-        /* Container for image and text */
-        .container {
+        /* Main content */
+        .main-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            margin-top: 50px;
             padding: 20px;
-            margin: 20px;
         }
 
         /* Image styling */
-        .profile-img {
-            width: 200px;
-            height: 200px;
+        .image-container img {
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             object-fit: cover;
         }
 
-        /* About Me Section */
-        .about-me {
+        /* Introduction text */
+        .intro-container {
             max-width: 600px;
             padding-left: 20px;
         }
 
-        .about-me h2 {
+        .intro-container h2 {
             font-size: 24px;
             color: #4CAF50;
         }
 
-        .about-me p {
+        .intro-container p {
             font-size: 18px;
             color: #555;
             line-height: 1.6;
         }
 
-        /* Section Title Styling */
-        .section-title {
-            font-size: 22px;
-            color: #4CAF50;
-            margin-top: 30px;
-        }
-
-        /* Section Content Styling */
-        .section-content {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-            margin-top: 10px;
-        }
-
-        /* Flexbox for sections */
+        /* Sections Styling */
         .sections {
             display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
+            justify-content: space-around;
+            margin-top: 50px;
         }
 
         .section {
-            width: 30%;
             background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 15px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
         }
 
-        /* Section headings */
         .section h3 {
             font-size: 20px;
             color: #4CAF50;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        /* Active Link Styling */
-        .active {
-            background-color: #333;
-            color: white;
+        .section-content {
+            font-size: 18px;
+            color: #555;
+            display: none;
+            line-height: 1.6;
         }
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
+        .section:hover {
+            background-color: #e0f2e9;
+        }
+
+        /* Show active content */
+        .show {
+            display: block;
         }
 
     </style>
 </head>
 <body>
 
-    <!-- Navigation Links -->
+    <!-- Navigation Bar -->
     <nav>
-        <a href="#skills" id="skills-link">Skills</a>
-        <a href="#education" id="education-link">Education</a>
-        <a href="#hobbies" id="hobbies-link">Hobbies</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#hobbies" class="nav-link">Hobbies</a>
+        <a href="#education" class="nav-link">Education</a>
     </nav>
 
-    <!-- About Me Container -->
-    <div class="container">
-        <!-- Image Section -->
-        <img src="photo.jpg" alt="Your Photo" class="profile-img">
-        
-        <!-- About Me Text Section -->
-        <div class="about-me">
+    <!-- Main Content: Image and Introduction -->
+    <div class="main-container">
+        <div class="image-container">
+            <img src="https://via.placeholder.com/250" alt="Your Image">
+        </div>
+        <div class="intro-container">
             <h2>About Me</h2>
-            <p>Hello, I'm [Your Name], a passionate web developer. I specialize in creating dynamic, user-friendly websites. I love learning new technologies, solving challenges, and constantly improving my skills. Below, you can find more about my skills, education, and hobbies.</p>
+            <p>Hello, I'm [Your Name]. I'm a web developer passionate about creating beautiful and responsive websites. I love learning new technologies and constantly improving my skills. Below, you can find more about my skills, hobbies, and educational background.</p>
         </div>
     </div>
 
-    <!-- Sections for Skills, Education, and Hobbies -->
+    <!-- Sections for Skills, Hobbies, Education -->
     <div class="sections">
         <!-- Skills Section -->
         <div class="section" id="skills">
             <h3>Skills</h3>
             <div class="section-content">
                 <ul>
-                    <li>Web Development (HTML, CSS, JavaScript)</li>
+                    <li>HTML, CSS, and JavaScript</li>
                     <li>Responsive Design</li>
-                    <li>Backend Development (Node.js, Express)</li>
+                    <li>Backend Development (Node.js)</li>
                     <li>Version Control (Git, GitHub)</li>
-                    <li>Database Management (MySQL, MongoDB)</li>
+                    <li>Database Management (MongoDB)</li>
                 </ul>
-            </div>
-        </div>
-
-        <!-- Education Section -->
-        <div class="section" id="education">
-            <h3>Education</h3>
-            <div class="section-content">
-                <p>BS in Computer Science from [University Name] - Graduated in 2020</p>
-                <p>Completed various online courses on web development and software engineering.</p>
             </div>
         </div>
 
@@ -174,36 +157,45 @@
             <div class="section-content">
                 <ul>
                     <li>Coding and building new projects</li>
-                    <li>Playing video games</li>
-                    <li>Reading tech blogs and books</li>
                     <li>Photography</li>
+                    <li>Playing video games</li>
                     <li>Traveling and exploring new places</li>
+                    <li>Reading tech blogs</li>
                 </ul>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section" id="education">
+            <h3>Education</h3>
+            <div class="section-content">
+                <p>Bachelor of Science in Computer Science from [University Name] - Graduated in 2020</p>
+                <p>Completed several online courses in web development, JavaScript, and Full-Stack Development.</p>
             </div>
         </div>
     </div>
 
     <script>
-        // JavaScript to highlight active link
-        const links = document.querySelectorAll('nav a');
+        // JavaScript for displaying the content when a section is clicked
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-        // Function to remove active class from all links
-        function removeActiveClass() {
-            links.forEach(link => {
-                link.classList.remove('active');
+        sections.forEach((section, index) => {
+            section.addEventListener('click', function () {
+                // Hide all sections content
+                document.querySelectorAll('.section-content').forEach(content => content.classList.remove('show'));
+
+                // Show clicked section content
+                section.querySelector('.section-content').classList.add('show');
+
+                // Remove active class from all links and add to the clicked one
+                navLinks.forEach(link => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
             });
-        }
-
-        // Function to add active class to clicked link
-        function setActiveClass(e) {
-            removeActiveClass();
-            e.target.classList.add('active');
-        }
-
-        // Add event listener to each link
-        links.forEach(link => {
-            link.addEventListener('click', setActiveClass);
         });
+
+        // Click on the first section by default
+        document.querySelector('.section').click();
     </script>
 
 </body>
