@@ -46,15 +46,20 @@
             padding-left: 30px;
         }
 
+        /* Remove the default margin or padding that might be causing extra space */
         .intro-container h2 {
             font-size: 32px;
             color: #4CAF50;
+            margin-top: 0; /* Remove any top margin */
+            margin-bottom: 10px; /* You can adjust this value to control the space below the heading */
         }
 
         .intro-container p {
             font-size: 18px;
             line-height: 1.6;
             color: #555;
+            margin-top: 0; /* Ensure there is no extra space above paragraphs */
+            margin-bottom: 15px; /* Optional, you can adjust the space between paragraphs */
         }
 
         footer {
@@ -66,7 +71,6 @@
             width: 100%;
             bottom: 0;
         }
-
     </style>
 </head>
 <body>
@@ -91,9 +95,10 @@
             <p>Apart from academics, I enjoy several hobbies. I love <strong>dancing</strong>, playing <strong>badminton</strong>, and I have a keen interest in <strong>travelling</strong> and exploring new cultures.</p>
         </div>
     </div>
+
     <!-- Footer -->
     <footer>
-        <p>Thank you </p>
+        <p>Thank you</p>
     </footer>
 </body>
 </html>
